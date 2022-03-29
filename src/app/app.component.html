@@ -1,32 +1,39 @@
-<mat-toolbar>
-  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-    <mat-icon *ngIf="!sidenav.opened">
-      menu
-    </mat-icon>
-    <mat-icon *ngIf="sidenav.opened">
-      close
-    </mat-icon>
-  </button>
-  <a routerLink='/home'>
-  <span>Timu's Blog</span>
-  </a>
-  <app-menu *ngIf="TopMenuOn"></app-menu>
-</mat-toolbar>
+<div class="main">
 
-<mat-sidenav-container autosize="true">
-  <mat-sidenav #sidenav="matSidenav">
-    <button mat-button class="menu-button" routerLink='/home' (click)="clickSidenavMenu();">
-      <mat-icon>home</mat-icon>
-      <span>Home</span>
+  <mat-toolbar>
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">
+        menu
+      </mat-icon>
+      <mat-icon *ngIf="sidenav.opened">
+        close
+      </mat-icon>
     </button>
-    <button mat-button class="menu-button" routerLink='/about' (click)="clickSidenavMenu();">
-        <mat-icon>info</mat-icon>
-        <span>About</span>
-    </button>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="content mat-elevation-z4">
-      <router-outlet></router-outlet>
+    <div class="title">
+      <a routerLink='/home'>
+      <span>Timu</span>
+      </a>
     </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    <span class="hide" *ngIf="!TopMenuOn"></span>
+    <app-menu *ngIf="TopMenuOn"></app-menu>
+  </mat-toolbar>
+
+  <mat-sidenav-container autosize="true">
+    <mat-sidenav #sidenav="matSidenav">
+      <button mat-button class="menu-button" routerLink='/home' (click)="clickSidenavMenu();">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-button class="menu-button" routerLink='/about' (click)="clickSidenavMenu();">
+          <mat-icon>info</mat-icon>
+          <span>About</span>
+      </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content mat-elevation-z4">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>

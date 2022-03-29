@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   background: black fixed;
-  font-family: "Lato", "PingFang TC", "Helvetica Neue", Helvetica, "微軟正黑體", "新細明體", Arial, sans-serif;
+  font-family: Montserrat, "Lato", "PingFang TC", "Helvetica Neue", Helvetica, "微軟正黑體", "新細明體", Arial, sans-serif;
 }
 
 hr {
