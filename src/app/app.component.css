@@ -29,22 +29,21 @@ app-menu {
 }
 
 mat-sidenav {
-  margin: 16px;
+  /* margin: 16px; */
   width: 200px;
   border-right: none;
   background-color: black;
-  border-radius: 10px;
-  padding: 10px;
+  /* border-radius: 10px; */
+  /* padding: 10px; */
   text-align: center;
 }
 
 .content {
   height: calc(100vh - 98px);
   margin: 16px;
-  margin-left: 32px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   font-size: 2rem;
   background-color: black;
   border-radius: 10px;

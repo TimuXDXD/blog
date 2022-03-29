@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppService } from './home.service';
 
@@ -7,7 +7,7 @@ import { AppService } from './home.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   time$: Observable<any>;
 
   constructor(private appService: AppService) {

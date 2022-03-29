@@ -1,0 +1,17 @@
+p.time{
+  margin-right: 5px;
+  width: 100%;
+  font-size: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+}
+
+div.homeMain {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

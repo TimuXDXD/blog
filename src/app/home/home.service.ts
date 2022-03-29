@@ -10,12 +10,13 @@ export class AppService {
   date = new Date();
 
   getDate() {
-    return timer(1, 1000).pipe(map((_) => this.getDateTime()));
+    return timer(0, 1000).pipe(map((_) => this.getDateTime()));
   }
 
   // get new time by adding + sec
   private getDateTime() {
-    this.date.setSeconds(this.date.getSeconds() + 1);
-    return (this.datepipe.transform(this.date, 'EEEE, MMM d, y, HH:mm:ss zzzz'));
+    this.date = new Date();
+    // this.date.setSeconds(this.date.getSeconds() + 1);
+    return (this.datepipe.transform(this.date, 'EEEE, MMM d, y, HH:mm:ss z'));
   }
 }
