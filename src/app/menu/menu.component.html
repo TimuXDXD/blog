@@ -1,3 +1,5 @@
-<button mat-button routerLink='/home'>Home</button>
+<button routerLink='/home' [ngClass]="{'picked':curPage[0]}">Home</button>
 
-<button mat-button routerLink='/about'>About</button>
+<button routerLink='/portfolio' [ngClass]="{'picked':curPage[1]}">Portfolio</button>
+
+<button routerLink='/about' [ngClass]="{'picked':curPage[2]}">About</button>

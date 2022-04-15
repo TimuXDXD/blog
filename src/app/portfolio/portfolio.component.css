@@ -1,0 +1,56 @@
+div.pfMain {
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+div.portfolio {
+  /* text-align: right; */
+}
+
+div.ntou {
+  width: 70%;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  padding-left: 64px;
+}
+
+p {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 32px;
+}
+
+h1 {
+  padding-left: 16px;
+}
+
+button {
+  background-color: rgba(59, 59, 104, 1); /* #3B3B68 Space Cadet */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(59, 59, 104, 0.8);
+  color: white;
+}
+
+@media only screen and (max-width:900px) {
+  div.ntou {
+    width: 100%;
+  }
+}

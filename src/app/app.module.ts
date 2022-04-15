@@ -10,12 +10,14 @@ import { CommonModule, DatePipe } from '@angular/common';
 
 import { routingComponent } from './app-routing.module';
 import { MenuComponent } from './menu/menu.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponent,
-    MenuComponent
+    MenuComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

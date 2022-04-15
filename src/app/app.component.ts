@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Blog';
   TopMenuOn = true;
+  curPage= 'home';
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
@@ -22,6 +23,7 @@ export class AppComponent {
 
   public negativePage(pageName: string){
     this.router.navigate([pageName]);
+    this.curPage = pageName;
   }
 
   public clickSidenavMenu(){

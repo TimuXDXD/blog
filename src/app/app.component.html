@@ -1,7 +1,7 @@
 <div class="main">
 
   <mat-toolbar>
-    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
       <mat-icon *ngIf="!sidenav.opened">
         menu
       </mat-icon>
@@ -11,7 +11,7 @@
     </button>
     <div class="title">
       <a routerLink='/home'>
-      <span>Timu</span>
+      <span>T</span>
       </a>
     </div>
     <span class="hide" *ngIf="!TopMenuOn"></span>
@@ -20,11 +20,15 @@
 
   <mat-sidenav-container autosize="true">
     <mat-sidenav #sidenav="matSidenav">
-      <button mat-button class="menu-button" routerLink='/home' (click)="clickSidenavMenu();">
+      <button class="sidenav" routerLink='/home' (click)="clickSidenavMenu();">
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
-      <button mat-button class="menu-button" routerLink='/about' (click)="clickSidenavMenu();">
+      <button class="sidenav" routerLink='/portfolio' (click)="clickSidenavMenu();">
+          <mat-icon>perm_contact_calendar</mat-icon>
+          <span>Portfolio</span>
+      </button>
+      <button class="sidenav" routerLink='/about' (click)="clickSidenavMenu();">
           <mat-icon>info</mat-icon>
           <span>About</span>
       </button>

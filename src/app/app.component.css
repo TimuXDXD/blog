@@ -1,17 +1,18 @@
 .main {
   margin: auto;
   padding: 0;
-  width: 100%;
-  max-width: 1024px;
   text-align: center;
+  width: 100%;
+  /* max-width: 1024px;
   border-right: 2px solid gray;
   border-left: 2px solid gray;
+  box-shadow: 0px 5px 10px gray; */
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0px 5px 10px gray;
 }
 
 mat-toolbar {
-  background-color: black;
+  /* background-color: rgba(60, 60, 60, 1); */
+  background-color: rgba(0, 0, 0, 0);
   display: inline-flex;
   justify-content: space-between;
   /* border-bottom: 1px solid white; */
@@ -22,6 +23,15 @@ mat-toolbar {
   cursor: normal;
   height: 40px;
   width: 40px;
+}
+
+div.title {
+  margin-left: 16px;
+}
+
+div.title a:hover {
+  color: #9e829c;
+  transition-duration: 0.4s;
 }
 
 app-menu {
@@ -38,24 +48,45 @@ mat-sidenav {
   text-align: center;
 }
 
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+  position: absolute;
+  /* height: 100vh; */
+  width: 100%;
+  background-color: black;
+}
+
+mat-sidenav-content {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
 .content {
   height: calc(100vh - 98px);
   margin: 16px;
+  width: 100%;
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  font-size: 2rem;
+  /* font-size: 2rem; */
   background-color: black;
-  border-radius: 10px;
 }
 
-mat-sidenav-container {
-  height: calc(100vh - 65px);
-  background-color: black;
-  /* font-family: Helvetica; */
+button {
+  background-color: rgba(0, 0, 0, 0); /* #3B3B68 Space Cadet */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
 }
 
-.menu-button {
+button.sidenav {
+  margin-top: 16px;
+  margin-bottom: 16px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -63,7 +94,7 @@ mat-sidenav-container {
   font-size: 1rem;
 }
 
-.menu-button mat-icon {
+.sidenav mat-icon {
   margin-right: 8px;
 }
 
@@ -72,6 +103,7 @@ mat-divider {
   margin-bottom: 16px;
   /* background-color: rgba(0, 0, 0, 0.5); */
 }
+
 
 @media only screen and (max-width: 1024px) {
   .main {
