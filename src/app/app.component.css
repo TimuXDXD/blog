@@ -130,4 +130,7 @@ mat-divider {
   main {
     border: none;
   }
+  div.title {
+    margin-left: none;
+  }
 }
