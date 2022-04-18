@@ -11,11 +11,31 @@
 }
 
 mat-toolbar {
+  -webkit-transition: all .5s ease-in-out !important;
+	-moz-transition: all .5s ease-in-out !important;
+	-o-transition: all .5s ease-in-out !important;
+	transition: all .5s ease-in-out !important;
+	top:0px;
   /* background-color: rgba(60, 60, 60, 1); */
   background-color: rgba(0, 0, 0, 0);
   display: inline-flex;
   justify-content: space-between;
   /* border-bottom: 1px solid white; */
+}
+
+.hideToolbar {
+  position: fixed;
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.showToolbar{
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	transform: translateY(0%);
 }
 
 .hide{

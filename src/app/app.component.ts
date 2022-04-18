@@ -1,8 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,19 +10,14 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Blog';
+  toolbarOn = true;
   TopMenuOn = true;
-  curPage= 'home';
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
-  public constructor(private titleService: Title, private observer: BreakpointObserver, private router: Router) {
+  public constructor(private titleService: Title, private observer: BreakpointObserver) {
     this.titleService.setTitle(this.title);
-  }
-
-  public negativePage(pageName: string){
-    this.router.navigate([pageName]);
-    this.curPage = pageName;
   }
 
   public clickSidenavMenu(){
@@ -44,4 +38,15 @@ export class AppComponent {
     });
   }
 
+  @HostListener('document:wheel', ['$event'])
+  onScroll($event:any): void {
+    if($event.wheelDeltaY > 0){
+      // console.log('Up');
+      this.toolbarOn = true;
+    }
+    else if($event.wheelDeltaY < -50){
+      // console.log('Down');
+      this.toolbarOn = false;
+    }
+  }
 }
