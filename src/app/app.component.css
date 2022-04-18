@@ -1,4 +1,4 @@
-.main {
+main {
   margin: auto;
   padding: 0;
   text-align: center;
@@ -69,7 +69,7 @@ mat-sidenav {
 }
 
 mat-sidenav-container {
-  height: calc(100vh - 65px);
+  height: 100vh;
   position: absolute;
   /* height: 100vh; */
   width: 100%;
@@ -78,14 +78,15 @@ mat-sidenav-container {
 
 mat-sidenav-content {
   display: flex;
-  justify-content:space-around;
-  align-items: center;
+  justify-content:flex-start;
+  align-items: flex-start;
 }
 
 .content {
-  height: calc(100vh - 98px);
+  /* height: calc(100vh - 98px); */
   margin: 16px;
   width: 100%;
+  height: calc(100vh - 16px);
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -126,7 +127,7 @@ mat-divider {
 
 
 @media only screen and (max-width: 1024px) {
-  .main {
+  main {
     border: none;
   }
 }
