@@ -11,7 +11,7 @@ div.portfolio {
   /* text-align: right; */
 }
 
-div.ntou {
+.portfolio div {
   width: 70%;
   display: flex;
   justify-content:flex-start;

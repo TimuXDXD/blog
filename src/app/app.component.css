@@ -3,6 +3,7 @@ main {
   padding: 0;
   text-align: center;
   width: 100%;
+  height: 100%;
   /* max-width: 1024px;
   border-right: 2px solid gray;
   border-left: 2px solid gray;
@@ -16,6 +17,7 @@ mat-toolbar {
 	-o-transition: all .5s ease-in-out !important;
 	transition: all .5s ease-in-out !important;
 	top:0px;
+  transition-property: height;
   /* background-color: rgba(60, 60, 60, 1); */
   background-color: rgba(0, 0, 0, 0);
   display: inline-flex;
@@ -24,18 +26,22 @@ mat-toolbar {
 }
 
 .hideToolbar {
-  position: fixed;
-	-webkit-transform: translateY(-100%);
+  /* position: fixed; */
+  height: 0px;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+	/* -webkit-transform: translateY(-100%);
 	-ms-transform: translateY(-100%);
 	-o-transform: translateY(-100%);
-	transform: translateY(-100%);
+	transform: translateY(-100%); */
 }
 
 .showToolbar{
-	-webkit-transform: translateY(0%);
+	/* -webkit-transform: translateY(0%);
 	-ms-transform: translateY(0%);
 	-o-transform: translateY(0%);
-	transform: translateY(0%);
+	transform: translateY(0%); */
 }
 
 .hide{
@@ -69,6 +75,11 @@ mat-sidenav {
 }
 
 mat-sidenav-container {
+  /* -webkit-transition: all .5s ease-in-out !important;
+	-moz-transition: all .5s ease-in-out !important;
+	-o-transition: all .5s ease-in-out !important;
+	transition: all .5s ease-in-out !important;
+  transition-property: position; */
   height: 100vh;
   position: absolute;
   /* height: 100vh; */
@@ -85,7 +96,7 @@ mat-sidenav-content {
 
 .content {
   /* height: calc(100vh - 98px); */
-  margin: 16px;
+  /* padding: 16px; */
   width: 100%;
   height: calc(100vh - 32px);
   /* display: flex;

@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'Blog';
   toolbarOn = true;
   TopMenuOn = true;
+  maxiumContainer = false;
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
@@ -40,13 +41,15 @@ export class AppComponent {
 
   @HostListener('document:wheel', ['$event'])
   onScroll($event:any): void {
-    if($event.wheelDeltaY > 0){
+    if($event.wheelDeltaY > 100){
       // console.log('Up');
       this.toolbarOn = true;
+      this.maxiumContainer = false;
     }
     else if($event.wheelDeltaY < -50){
       // console.log('Down');
       this.toolbarOn = false;
+      this.maxiumContainer = true;
     }
   }
 }
